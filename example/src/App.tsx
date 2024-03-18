@@ -1,18 +1,25 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-simple-popup-menu';
+import PopupMenu from 'react-native-simple-popup-menu';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <PopupMenu
+        onPress={() => {
+          console.log("teste")
+        }}
+        onError={() => {}}
+        items={[
+          'teste'
+        ]}
+        // underlayColor={"#2353fc"}
+        style={{
+          // backgroundColor: "#000"
+        }}
+      />
+      <Text>Teste</Text>
     </View>
   );
 }

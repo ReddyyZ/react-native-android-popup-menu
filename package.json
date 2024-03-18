@@ -76,6 +76,7 @@
     "@types/react": "^18.2.44"
   },
   "peerDependencies": {
+    "@expo/vector-icons": "*",
     "react": "*",
     "react-native": "*"
   },
