@@ -2,7 +2,7 @@
 
 A simple popup menu for React Native android apps.
 
-![Example](example/example.gif)
+<img alt="Example" src="example/example.gif" width="250">
 
 ## Installation
 
