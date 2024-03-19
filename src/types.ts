@@ -14,7 +14,6 @@ export interface PopupMenuProps {
   onPress: (event: PopupEvent, index: number | undefined) => void;
   items: string[];
   onError?: () => void | undefined;
-  accessibilityLabel?: string;
   underlayColor?: ColorValue | undefined;
   containerStyle?: StyleProp<ViewStyle> | undefined;
   buttonStyle?: StyleProp<ViewStyle> | undefined;
