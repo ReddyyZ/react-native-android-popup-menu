@@ -1,15 +1,28 @@
-import type { ColorValue, StyleProp } from 'react-native';
+import type { ReactNode } from 'react';
+import type { ColorValue, StyleProp, TextStyle, ViewStyle } from 'react-native';
+
+
+export type ModeOption =
+  | 'opacity'
+  | 'highlight'
+  | 'without-feedback'
+  | 'native';
+
+export type PopupEvent = 'dismissed' | 'itemSelected';
 
 export interface PopupMenuProps {
-  onPress: (item: string, index: number | undefined) => void;
-  onError?: () => void;
+  onPress: (event: PopupEvent, index: number | undefined) => void;
   items: string[];
+  onError?: () => void | undefined;
   accessibilityLabel?: string;
-  underlayColor?: ColorValue;
-  style?: StyleProp;
-  icon?: MaterialIconsList;
-  iconComponent?: () => ();
-  iconSize?: Number;
+  underlayColor?: ColorValue | undefined;
+  containerStyle?: StyleProp<ViewStyle> | undefined;
+  buttonStyle?: StyleProp<ViewStyle> | undefined;
+  iconStyle?: StyleProp<TextStyle> | undefined;
+  icon?: MaterialIconsList | undefined;
+  iconComponent?: () => ReactNode | undefined;
+  iconSize?: Number | undefined;
+  mode?: ModeOption | undefined;
 };
 
 export type MaterialIconsList =
