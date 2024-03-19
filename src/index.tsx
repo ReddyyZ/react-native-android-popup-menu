@@ -16,9 +16,11 @@ export default function PopupMenu({
   underlayColor = 'rgba(0,0,0,0.2)',
   style,
   icon = 'more-vert',
+  iconComponent,
+  iconSize = 24
 }: PopupMenuProps) {
   if (!items || typeof items !== 'object') {
-    throw Error("react-native-simple-popup-menu: Expected items array");
+    throw Error("react-native-simple-popup-menu: Missing items");
   }
 
   const iconRef = useRef(null);
@@ -44,7 +46,11 @@ export default function PopupMenu({
           ...style,
         }}
       >
-        <Icon name={icon} size={24} color={'#222222'} ref={iconRef} />
+      {
+        !iconComponent ? (
+          <Icon name={icon} size={iconSize} color={'#222222'} ref={iconRef} />
+        ) : iconComponent
+      }
       </TouchableHighlight>
     </View>
   );

@@ -8,6 +8,8 @@ export interface PopupMenuProps {
   underlayColor?: ColorValue;
   style?: StyleProp;
   icon?: MaterialIconsList;
+  iconComponent?: () => ();
+  iconSize: Number;
 };
 
 export type MaterialIconsList =
