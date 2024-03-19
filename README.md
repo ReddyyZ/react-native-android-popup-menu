@@ -2,6 +2,8 @@
 
 A simple popup menu for React Native android apps.
 
+![Example](example/example.gif)
+
 ## Installation
 
 ```sh
