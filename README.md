@@ -1,4 +1,4 @@
-# react-native-simple-popup-menu
+# react-native-android-popup-menu
 
 A simple popup menu for React Native android apps.
 
@@ -7,17 +7,17 @@ A simple popup menu for React Native android apps.
 ## Installation
 
 ```sh
-npm install react-native-simple-popup-menu
+npm install react-native-android-popup-menu
 ```
 or
 ```sh
-yarn add react-native-simple-popup-menu
+yarn add react-native-android-popup-menu
 ```
 
 ## Usage
 
 ```js
-import PopupMenu from 'react-native-simple-popup-menu';
+import PopupMenu from 'react-native-android-popup-menu';
 
 export default function MyApp() {
   // ...

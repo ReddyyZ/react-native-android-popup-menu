@@ -1,5 +1,5 @@
 {
-  "name": "react-native-simple-popup-menu",
+  "name": "react-native-android-popup-menu",
   "version": "0.1.0",
   "description": "A simple popup menu for React Native apps.",
   "main": "lib/commonjs/index",
@@ -26,7 +26,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-simple-popup-menu-example",
+    "example": "yarn workspace react-native-android-popup-menu-example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -41,14 +41,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ReddyyZ/react-native-simple-popup-menu.git"
+    "url": "git+https://github.com/ReddyyZ/react-native-android-popup-menu.git"
   },
   "author": "ReddyyZ <arthur.cost.oli@gmail.com> (https://github.com/ReddyyZ)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ReddyyZ/react-native-simple-popup-menu/issues"
+    "url": "https://github.com/ReddyyZ/react-native-android-popup-menu/issues"
   },
-  "homepage": "https://github.com/ReddyyZ/react-native-simple-popup-menu#readme",
+  "homepage": "https://github.com/ReddyyZ/react-native-android-popup-menu#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

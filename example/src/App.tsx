@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, Text, View } from 'react-native';
-import PopupMenu from 'react-native-simple-popup-menu';
+import PopupMenu from 'react-native-android-popup-menu';
 
 export default function App() {
   return (
