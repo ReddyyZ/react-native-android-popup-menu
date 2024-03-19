@@ -2,14 +2,14 @@ import type { ColorValue, StyleProp } from 'react-native';
 
 export interface PopupMenuProps {
   onPress: (item: string, index: number | undefined) => void;
-  onError: () => void;
+  onError?: () => void;
   items: string[];
   accessibilityLabel?: string;
   underlayColor?: ColorValue;
   style?: StyleProp;
   icon?: MaterialIconsList;
   iconComponent?: () => ();
-  iconSize: Number;
+  iconSize?: Number;
 };
 
 export type MaterialIconsList =

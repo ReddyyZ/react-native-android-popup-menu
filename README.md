@@ -1,21 +1,42 @@
 # react-native-simple-popup-menu
 
-A simple popup menu for React Native apps.
+A simple popup menu for React Native android apps.
 
 ## Installation
 
 ```sh
 npm install react-native-simple-popup-menu
 ```
+or
+```sh
+yarn add react-native-simple-popup-menu
+```
 
 ## Usage
 
 ```js
-import { multiply } from 'react-native-simple-popup-menu';
+import PopupMenu from 'react-native-simple-popup-menu';
 
-// ...
-
-const result = await multiply(3, 7);
+export default function MyApp() {
+  const onSelectItem = (item, index) => {
+    if (item === "selected_item") {
+      console.log("selected item:", index);
+    }
+  };
+  
+  const options = [
+    "Edit",
+    "Delete"
+  ];
+  
+  return (
+    // ...
+    <PopupMenu
+      onPress={onSelectItem}
+      items={options}
+    />
+  );
+}
 ```
 
 ## Contributing
