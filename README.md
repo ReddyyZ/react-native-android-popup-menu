@@ -18,6 +18,7 @@ yarn add react-native-simple-popup-menu
 import PopupMenu from 'react-native-simple-popup-menu';
 
 export default function MyApp() {
+  // ...
   const onSelectItem = (item, index) => {
     if (item === "selected_item") {
       console.log("selected item:", index);
@@ -38,6 +39,22 @@ export default function MyApp() {
   );
 }
 ```
+
+## Options
+
+| Key            | Type                                                      | Required | Default Value   |
+|----------------|-----------------------------------------------------------|----------|-----------------|
+| onPress        | (event: PopupEvent, index: number \| undefined) => void   | True     | undefined       |
+| items          | string[]                                                  | True     | undefined       |
+| mode           | ModeOption \| undefined                                   | False    | highlight       |
+| icon           | MaterialIconsList \| undefined                            | False    | more-vert       |
+| iconSize       | Number \| undefined                                       | False    | 24              |
+| iconComponent  | () => ReactNode \| undefined                              | False    | undefined       |
+| underlayColor  | ColorValue \| undefined                                   | False    | rgba(0,0,0,0.2) |
+| containerStyle | StyleProp\<ViewStyle\> \| undefined                       | False    | undefined       |
+| buttonStyle    | StyleProp\<ViewStyle\> \| undefined                       | False    | undefined       |
+| iconStyle      | StyleProp\<TextStyle\> \| undefined                       | False    | undefined       |
+
 
 ## Contributing
 
