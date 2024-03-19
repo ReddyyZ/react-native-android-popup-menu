@@ -1,25 +1,78 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import PopupMenu from 'react-native-simple-popup-menu';
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <Text>Highlight mode</Text>
       <PopupMenu
-        onPress={() => {
-          console.log("teste")
+        onPress={(event, index) => {
+          if (event === 'itemSelected') {
+            console.log('Pressed:', index);
+          } else {
+            console.log('Dismissed');
+          }
         }}
         onError={() => {}}
-        items={[
-          'teste'
-        ]}
-        // underlayColor={"#2353fc"}
-        style={{
-          // backgroundColor: "#000"
+        items={['teste']}
+        containerStyle={{
+          margin: 16
         }}
+        mode="highlight"
       />
-      <Text>Teste</Text>
+
+      <Text>Native mode</Text>
+      <PopupMenu
+        onPress={(event, index) => {
+          if (event === 'itemSelected') {
+            console.log('Pressed:', index);
+          } else {
+            console.log('Dismissed');
+          }
+        }}
+        onError={() => {}}
+        items={['teste']}
+        containerStyle={{
+          margin: 16
+        }}
+        mode="native"
+      />
+
+      <Text>Opacity mode</Text>
+      <PopupMenu
+        onPress={(event, index) => {
+          if (event === 'itemSelected') {
+            console.log('Pressed:', index);
+          } else {
+            console.log('Dismissed');
+          }
+        }}
+        onError={() => {}}
+        items={['teste']}
+        containerStyle={{
+          margin: 16
+        }}
+        mode="opacity"
+      />
+
+      <Text>Without Feedback mode</Text>
+      <PopupMenu
+        onPress={(event, index) => {
+          if (event === 'itemSelected') {
+            console.log('Pressed:', index);
+          } else {
+            console.log('Dismissed');
+          }
+        }}
+        onError={() => {}}
+        items={['teste']}
+        containerStyle={{
+          margin: 16
+        }}
+        mode="without-feedback"
+      />
     </View>
   );
 }
