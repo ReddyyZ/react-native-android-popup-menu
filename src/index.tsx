@@ -9,7 +9,7 @@ import {
   type TouchableWithoutFeedbackProps,
   type TouchableHighlightProps,
   type TouchableOpacityProps,
-  type TouchableNativeFeedbackProps
+  type TouchableNativeFeedbackProps,
 } from 'react-native';
 import React, { useRef } from 'react';
 import Icon from '@expo/vector-icons/MaterialIcons';
@@ -28,7 +28,12 @@ export default function PopupMenu({
   iconSize = 24,
   mode = 'highlight',
   ...props
-}: PopupMenuProps | TouchableWithoutFeedbackProps | TouchableHighlightProps | TouchableOpacityProps | TouchableNativeFeedbackProps) {
+}:
+  | PopupMenuProps
+  | TouchableWithoutFeedbackProps
+  | TouchableHighlightProps
+  | TouchableOpacityProps
+  | TouchableNativeFeedbackProps) {
   if (!items || typeof items !== 'object') {
     throw Error('react-native-simple-popup-menu: Missing items');
   }
@@ -63,11 +68,17 @@ export default function PopupMenu({
         style={buttonStyle}
         {...props}
       >
-        {
-          !iconComponent ? (
-            <Icon name={icon} size={iconSize} color={'#222222'} ref={iconRef} style={iconStyle} />
-          ) : iconComponent
-        }
+        {!iconComponent ? (
+          <Icon
+            name={icon}
+            size={iconSize}
+            color={'#222222'}
+            ref={iconRef}
+            style={iconStyle}
+          />
+        ) : (
+          iconComponent
+        )}
       </Touchable>
     </View>
   );

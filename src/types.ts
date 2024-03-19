@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import type { ColorValue, StyleProp, TextStyle, ViewStyle } from 'react-native';
 
-
 export type ModeOption =
   | 'opacity'
   | 'highlight'
@@ -22,7 +21,7 @@ export interface PopupMenuProps {
   iconComponent?: () => ReactNode | undefined;
   iconSize?: Number | undefined;
   mode?: ModeOption | undefined;
-};
+}
 
 export type MaterialIconsList =
   | 'style'
