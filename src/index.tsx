@@ -6,10 +6,10 @@ import {
   TouchableOpacity,
   TouchableNativeFeedback,
   TouchableWithoutFeedback,
-  type TouchableWithoutFeedbackProps,
+  type TouchableNativeFeedbackProps,
   type TouchableHighlightProps,
   type TouchableOpacityProps,
-  type TouchableNativeFeedbackProps,
+  type TouchableWithoutFeedbackProps,
 } from 'react-native';
 import React, { useRef } from 'react';
 import Icon from '@expo/vector-icons/MaterialIcons';
@@ -28,12 +28,11 @@ export default function PopupMenu({
   iconSize = 24,
   mode = 'highlight',
   ...props
-}:
-  | PopupMenuProps
-  | TouchableWithoutFeedbackProps
-  | TouchableHighlightProps
-  | TouchableOpacityProps
-  | TouchableNativeFeedbackProps) {
+}: PopupMenuProps &
+  TouchableNativeFeedbackProps &
+  TouchableHighlightProps &
+  TouchableOpacityProps &
+  TouchableWithoutFeedbackProps) {
   if (!items || typeof items !== 'object') {
     throw Error('react-native-simple-popup-menu: Missing items');
   }
@@ -62,24 +61,40 @@ export default function PopupMenu({
 
   return (
     <View style={containerStyle}>
-      <Touchable
-        onPress={onPressBtn}
-        underlayColor={underlayColor}
-        style={buttonStyle}
-        {...props}
-      >
-        {!iconComponent ? (
-          <Icon
-            name={icon}
-            size={iconSize}
-            color={'#222222'}
-            ref={iconRef}
-            style={iconStyle}
-          />
-        ) : (
-          iconComponent
-        )}
-      </Touchable>
+      {mode === 'highlight' ? (
+        <TouchableHighlight
+          onPress={onPressBtn}
+          style={buttonStyle}
+          underlayColor={underlayColor}
+          {...props}
+        >
+          {!iconComponent ? (
+            <Icon
+              name={icon}
+              size={iconSize}
+              color={'#222222'}
+              ref={iconRef}
+              style={iconStyle}
+            />
+          ) : (
+            iconComponent
+          )}
+        </TouchableHighlight>
+      ) : (
+        <Touchable onPress={onPressBtn} style={buttonStyle} {...props}>
+          {!iconComponent ? (
+            <Icon
+              name={icon}
+              size={iconSize}
+              color={'#222222'}
+              ref={iconRef}
+              style={iconStyle}
+            />
+          ) : (
+            iconComponent
+          )}
+        </Touchable>
+      )}
     </View>
   );
 }
