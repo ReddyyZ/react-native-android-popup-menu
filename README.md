@@ -46,14 +46,14 @@ export default function MyApp() {
 |----------------|-----------------------------------------------------------|----------|-----------------|
 | onPress        | (event: PopupEvent, index: number \| undefined) => void   | True     | undefined       |
 | items          | string[]                                                  | True     | undefined       |
-| mode           | ModeOption \| undefined                                   | False    | highlight       |
-| icon           | MaterialIconsList \| undefined                            | False    | more-vert       |
-| iconSize       | Number \| undefined                                       | False    | 24              |
-| iconComponent  | () => ReactNode \| undefined                              | False    | undefined       |
-| underlayColor  | ColorValue \| undefined                                   | False    | rgba(0,0,0,0.2) |
-| containerStyle | StyleProp\<ViewStyle\> \| undefined                       | False    | undefined       |
-| buttonStyle    | StyleProp\<ViewStyle\> \| undefined                       | False    | undefined       |
-| iconStyle      | StyleProp\<TextStyle\> \| undefined                       | False    | undefined       |
+| mode           | ModeOption                                                | False    | highlight       |
+| icon           | MaterialIconsList                                         | False    | more-vert       |
+| iconSize       | Number                                                    | False    | 24              |
+| iconComponent  | () => ReactNode                                           | False    | undefined       |
+| underlayColor  | ColorValue                                                | False    | rgba(0,0,0,0.2) |
+| containerStyle | StyleProp\<ViewStyle\>                                    | False    | undefined       |
+| buttonStyle    | StyleProp\<ViewStyle\>                                    | False    | undefined       |
+| iconStyle      | StyleProp\<TextStyle\>                                    | False    | undefined       |
 
 
 ## Contributing

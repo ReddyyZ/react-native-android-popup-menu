@@ -1,25 +1,22 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import PopupMenu from 'react-native-simple-popup-menu';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <PopupMenu
-        onPress={() => {
-          console.log("teste")
+        onPress={(event, index) => {
+          if (event === 'itemSelected') {
+            console.log('Pressed:', index);
+          } else {
+            console.log('Dismissed');
+          }
         }}
         onError={() => {}}
-        items={[
-          'teste'
-        ]}
-        // underlayColor={"#2353fc"}
-        style={{
-          // backgroundColor: "#000"
-        }}
+        items={['teste']}
       />
-      <Text>Teste</Text>
     </View>
   );
 }
