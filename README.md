@@ -57,6 +57,21 @@ export default function MyApp() {
 | buttonStyle    | StyleProp\<ViewStyle\>                                            | False    | undefined       |
 | iconStyle      | StyleProp\<TextStyle\>                                            | False    | undefined       |
 
+## Types
+
+**ModeOption**
+```js
+export type ModeOption =
+  | 'opacity'
+  | 'highlight'
+  | 'without-feedback'
+  | 'native';
+```
+
+**PopupEvent**
+```js
+export type PopupEvent = 'dismissed' | 'itemSelected';
+```
 
 ## Contributing
 
