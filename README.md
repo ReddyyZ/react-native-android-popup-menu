@@ -22,7 +22,7 @@ import PopupMenu from 'react-native-android-popup-menu';
 export default function MyApp() {
   // ...
   const onSelectItem = (item, index) => {
-    if (item === "selected_item") {
+    if (item === "itemSelected") {
       console.log("selected item:", index);
     }
   };
