@@ -46,7 +46,7 @@ export default function MyApp() {
 
 | Key            | Type                                                      | Required | Default Value   |
 |----------------|-----------------------------------------------------------|----------|-----------------|
-| onPress        | (event: PopupEvent | string, index: number | undefined) => void   | True     | undefined       |
+| onPress        | (event: PopupEvent \| string, index: number \| undefined) => void   | True     | undefined       |
 | items          | string[]                                                          | True     | undefined       |
 | mode           | ModeOption                                                        | False    | highlight       |
 | icon           | MaterialIcons.glyphMap                                            | False    | more-vert       |
