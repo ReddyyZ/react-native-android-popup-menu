@@ -60,7 +60,7 @@ export default function MyApp() {
 ## Types
 
 **ModeOption**
-```js
+```ts
 export type ModeOption =
   | 'opacity'
   | 'highlight'
@@ -69,7 +69,7 @@ export type ModeOption =
 ```
 
 **PopupEvent**
-```js
+```ts
 export type PopupEvent = 'dismissed' | 'itemSelected';
 ```
 
