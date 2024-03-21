@@ -1,6 +1,6 @@
 # react-native-android-popup-menu
 
-A simple popup menu for React Native android apps.
+A simple popup menu for React Native android apps. 
 
 <img alt="Example" src="example/example.gif" width="250">
 
