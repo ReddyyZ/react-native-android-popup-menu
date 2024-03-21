@@ -62,7 +62,6 @@ android/keystores/debug.keystore
 
 # Yarn
 .yarn/
-yarn.lock
 
 # Expo
 .expo/
