@@ -34,7 +34,7 @@ export default function PopupMenu({
   TouchableOpacityProps &
   TouchableWithoutFeedbackProps) {
   if (!items || typeof items !== 'object') {
-    throw Error('react-native-simple-popup-menu: Missing items');
+    throw Error('react-native-android-popup-menu: Missing items');
   }
 
   const iconRef = useRef(null);
