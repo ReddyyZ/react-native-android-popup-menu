@@ -1,6 +1,6 @@
 {
   "name": "react-native-android-popup-menu",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple popup menu for React Native apps.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
