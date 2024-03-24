@@ -20,6 +20,7 @@ export interface PopupMenuProps {
   iconStyle?: StyleProp<TextStyle> | undefined;
   iconComponent?: ReactNode;
   iconSize?: number | undefined;
+  iconColor?: ColorValue | undefined;
   mode?: ModeOption | undefined;
   icon?: keyof typeof MaterialIcons.glyphMap;
 }

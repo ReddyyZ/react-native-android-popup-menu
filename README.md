@@ -44,18 +44,19 @@ export default function MyApp() {
 
 ## Options
 
-| Key            | Type                                                      | Required | Default Value   |
-|----------------|-----------------------------------------------------------|----------|-----------------|
+| Key            | Type                                                                | Required | Default Value   |
+|----------------|---------------------------------------------------------------------|----------|-----------------|
 | onPress        | (event: PopupEvent \| string, index: number \| undefined) => void   | True     | undefined       |
-| items          | string[]                                                          | True     | undefined       |
-| mode           | ModeOption                                                        | False    | highlight       |
-| icon           | MaterialIcons.glyphMap                                            | False    | more-vert       |
-| iconSize       | number                                                            | False    | 24              |
-| iconComponent  | ReactNode                                                         | False    | undefined       |
-| underlayColor  | ColorValue                                                        | False    | rgba(0,0,0,0.2) |
-| containerStyle | StyleProp\<ViewStyle\>                                            | False    | undefined       |
-| buttonStyle    | StyleProp\<ViewStyle\>                                            | False    | undefined       |
-| iconStyle      | StyleProp\<TextStyle\>                                            | False    | undefined       |
+| items          | string[]                                                            | True     | undefined       |
+| mode           | ModeOption                                                          | False    | highlight       |
+| icon           | MaterialIcons.glyphMap                                              | False    | more-vert       |
+| iconSize       | number                                                              | False    | 24              |
+| iconComponent  | ReactNode                                                           | False    | undefined       |
+| iconColor      | ColorValue                                                          | False    | #222222         |
+| underlayColor  | ColorValue                                                          | False    | rgba(0,0,0,0.2) |
+| containerStyle | StyleProp\<ViewStyle\>                                              | False    | undefined       |
+| buttonStyle    | StyleProp\<ViewStyle\>                                              | False    | undefined       |
+| iconStyle      | StyleProp\<TextStyle\>                                              | False    | undefined       |
 
 ## Types
 

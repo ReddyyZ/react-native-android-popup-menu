@@ -26,6 +26,7 @@ export default function PopupMenu({
   icon = 'more-vert',
   iconComponent,
   iconSize = 24,
+  iconColor = '#222222',
   mode = 'highlight',
   ...props
 }: PopupMenuProps &
@@ -72,7 +73,7 @@ export default function PopupMenu({
             <Icon
               name={icon}
               size={iconSize}
-              color={'#222222'}
+              color={iconColor}
               ref={iconRef}
               style={iconStyle}
             />
@@ -86,7 +87,7 @@ export default function PopupMenu({
             <Icon
               name={icon}
               size={iconSize}
-              color={'#222222'}
+              color={iconColor}
               ref={iconRef}
               style={iconStyle}
             />
