@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import { StyleSheet, Text, View } from 'react-native';
 import PopupMenu from 'react-native-android-popup-menu';
-import type { PopupEvent } from '../../src/types';
 
 const CustomIconComponent = ({ iconRef, ...props }) => (
   <Text
@@ -73,7 +72,7 @@ export default function App() {
 
       <Text>Without Feedback mode</Text>
       <PopupMenu
-        onPress={(event: PopupEvent, index) => {
+        onPress={(event, index) => {
           if (event === 'itemSelected') {
             console.log('Pressed:', index);
           } else {
@@ -90,7 +89,7 @@ export default function App() {
 
       <Text>Using custom iconComponent</Text>
       <PopupMenu
-        onPress={(event: string, index: number) => {
+        onPress={(event, index) => {
           if (event === 'itemSelected') {
             console.log('Pressed:', index);
           } else {
