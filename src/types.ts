@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react';
 import type { ColorValue, StyleProp, TextStyle, ViewStyle } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
@@ -18,7 +17,7 @@ export interface PopupMenuProps {
   containerStyle?: StyleProp<ViewStyle> | undefined;
   buttonStyle?: StyleProp<ViewStyle> | undefined;
   iconStyle?: StyleProp<TextStyle> | undefined;
-  iconComponent?: ReactNode;
+  IconComponent?: ({ iconRef, ...props }) => React.ReactNode;
   iconSize?: number | undefined;
   iconColor?: ColorValue | undefined;
   mode?: ModeOption | undefined;

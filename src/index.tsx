@@ -24,7 +24,7 @@ export default function PopupMenu({
   buttonStyle,
   iconStyle,
   icon = 'more-vert',
-  iconComponent,
+  IconComponent,
   iconSize = 24,
   iconColor = '#222222',
   mode = 'highlight',
@@ -69,7 +69,7 @@ export default function PopupMenu({
           underlayColor={underlayColor}
           {...props}
         >
-          {!iconComponent ? (
+          {!IconComponent ? (
             <Icon
               name={icon}
               size={iconSize}
@@ -78,12 +78,12 @@ export default function PopupMenu({
               style={iconStyle}
             />
           ) : (
-            iconComponent
+            <IconComponent iconRef={iconRef} />
           )}
         </TouchableHighlight>
       ) : (
         <Touchable onPress={onPressBtn} style={buttonStyle} {...props}>
-          {!iconComponent ? (
+          {!IconComponent ? (
             <Icon
               name={icon}
               size={iconSize}
@@ -92,7 +92,7 @@ export default function PopupMenu({
               style={iconStyle}
             />
           ) : (
-            iconComponent
+            <IconComponent iconRef={iconRef} />
           )}
         </Touchable>
       )}
