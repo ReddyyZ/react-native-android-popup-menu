@@ -51,7 +51,7 @@ export default function MyApp() {
 | mode           | ModeOption                                                          | False    | highlight       |
 | icon           | MaterialIcons.glyphMap                                              | False    | more-vert       |
 | iconSize       | number                                                              | False    | 24              |
-| iconComponent  | ReactNode                                                           | False    | undefined       |
+| iconComponent  | ({ iconRef, ...props }) => React.ReactNode                          | False    | undefined       |
 | iconColor      | ColorValue                                                          | False    | #222222         |
 | underlayColor  | ColorValue                                                          | False    | rgba(0,0,0,0.2) |
 | containerStyle | StyleProp\<ViewStyle\>                                              | False    | undefined       |
